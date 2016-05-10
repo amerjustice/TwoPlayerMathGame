@@ -13,6 +13,8 @@
 		97368D471CE12D16004D40E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97368D451CE12D16004D40E0 /* Main.storyboard */; };
 		97368D491CE12D16004D40E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97368D481CE12D16004D40E0 /* Assets.xcassets */; };
 		97368D4C1CE12D16004D40E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97368D4A1CE12D16004D40E0 /* LaunchScreen.storyboard */; };
+		97368D551CE132DB004D40E0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 97368D541CE132DA004D40E0 /* Player.m */; };
+		97368D581CE132E6004D40E0 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97368D571CE132E6004D40E0 /* GameModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		97368D481CE12D16004D40E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97368D4B1CE12D16004D40E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97368D4D1CE12D16004D40E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97368D531CE132DA004D40E0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		97368D541CE132DA004D40E0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		97368D561CE132E6004D40E0 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		97368D571CE132E6004D40E0 /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				97368D421CE12D15004D40E0 /* ViewController.h */,
 				97368D431CE12D16004D40E0 /* ViewController.m */,
 				97368D451CE12D16004D40E0 /* Main.storyboard */,
+				97368D531CE132DA004D40E0 /* Player.h */,
+				97368D541CE132DA004D40E0 /* Player.m */,
+				97368D561CE132E6004D40E0 /* GameModel.h */,
+				97368D571CE132E6004D40E0 /* GameModel.m */,
 				97368D481CE12D16004D40E0 /* Assets.xcassets */,
 				97368D4A1CE12D16004D40E0 /* LaunchScreen.storyboard */,
 				97368D4D1CE12D16004D40E0 /* Info.plist */,
@@ -110,6 +120,7 @@
 				TargetAttributes = {
 					97368D381CE12D15004D40E0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = WDLRMQF9Y5;
 					};
 				};
 			};
@@ -149,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97368D551CE132DB004D40E0 /* Player.m in Sources */,
 				97368D441CE12D16004D40E0 /* ViewController.m in Sources */,
+				97368D581CE132E6004D40E0 /* GameModel.m in Sources */,
 				97368D411CE12D15004D40E0 /* AppDelegate.m in Sources */,
 				97368D3E1CE12D15004D40E0 /* main.m in Sources */,
 			);
@@ -263,10 +276,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TwoPlayerMathGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = amerjustice.TwoPlayerMathGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TwoPlayerMathGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = amerjustice.TwoPlayerMathGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
