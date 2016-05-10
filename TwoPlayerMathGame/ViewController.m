@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *correctLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 
 
 
@@ -28,10 +29,18 @@
 @implementation ViewController
 
 
+
+
 -(void)updateUI {
     self.equation.text = [NSString stringWithFormat:@"%d + %d = %@", self.gameModel.num1, self.gameModel.num2, self.input];
     self.player1Lives.text = [NSString stringWithFormat:@"Player 1 \u2764: %d", self.gameModel.player1.lives];
     self.player2Lives.text = [NSString stringWithFormat:@"Player 2 \u2764: %d", self.gameModel.player2.lives];
+    if([self.gameModel.currentPlayer isEqual:self.gameModel.player1]){
+        self.playerLabel.text = @"Player 1";
+    } else if([self.gameModel.currentPlayer isEqual:self.gameModel.player2]){
+        self.playerLabel.text = @"Player 2";
+    }
+
 }
 
 - (IBAction)button1:(id)sender {
@@ -184,7 +193,6 @@
     
     self.gameModel = [[GameModel alloc] init];
     self.input = [[NSMutableString alloc] init];
-    
     
     [self updateUI];
   
